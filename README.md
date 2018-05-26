@@ -12,13 +12,17 @@ Please feel free to read and try this codes. It may be a good **reference** for 
 
 In this method, I want to solve the following problem:
 
-$$arg \min\limits_{\alpha} \sum_{i=1}^K||D_iB_iM_i\Phi\alpha - y_i||_2+\lambda_1\sqrt{\nabla(\Phi\alpha)2+\rho}+\lambda_2||\alpha||_1$$
+![Equ-MultiframeAll](https://raw.githubusercontent.com/WJGan1995/Video-Super-Resolution/master/result/Equ-MultiframeAll.png)
 
 which can be splited into two sub-problem like this:
 
-(1) **MAP & Total Variation Minimum**:  $arg \min\limits_{z} \sum_{i=1}^K||D_iB_iM_iz - y_i||_2+\lambda_1\sqrt{\nabla(z)^2+\rho}$
+(1) **MAP & Total Variation Minimum**:  
 
-(2) **L2-Sparse**: $arg \min\limits_{\alpha} ||\Phi\alpha-z||_2+\lambda_2||\alpha||_1$
+![Equ-MultiframeAll](https://raw.githubusercontent.com/WJGan1995/Video-Super-Resolution/master/result/Equ-MAPandTV.png)
+
+(2) **L2-Sparse**: 
+
+![Equ-MultiframeAll](https://raw.githubusercontent.com/WJGan1995/Video-Super-Resolution/master/result/Equ-L2Sparse.png)
 
 
 
@@ -28,7 +32,7 @@ I solve the first sub-problem with steepest descent method (Actually **Adam**) w
 
 After that, I use **Total Variation Minimum in time domain** to deblur video, which means:
 
-$$arg\min\limits_{f}||f-h||_2+\sum\sqrt{(f(x,y,t+1)-f(x,y,t))^2+\rho}$$
+![Equ-MultiframeAll](https://raw.githubusercontent.com/WJGan1995/Video-Super-Resolution/master/result/Equ-TVinTime.png)
 
 $h$ means video obtained in above step. How to solve it? : [deconvtv - fast algorithm for total variation deconvolution](https://ww2.mathworks.cn/matlabcentral/fileexchange/43600-deconvtv-fast-algorithm-for-total-variation-deconvolution?s_tid=srchtitle)
 
