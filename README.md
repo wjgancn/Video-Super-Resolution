@@ -7,7 +7,7 @@ They are codes used in my Bachelor Thesis, which has the same title with this re
 Please feel free to read and try this codes. It may be a good **reference** for you, but not a good and stable implement. On the other word, it is hard to use this codes **directly** in your **scenario**. :(
 
 (Updated Nov 15, 2018)
-Upload a paper written by myself for reference. It is not aimed to be published but a summary of my work. More importantly, **it's hard to say it's written well**.
+Upload a paper written by myself for reference. It is not aimed to be published but a summary of my `Multi-Frame-Based` work. More importantly, **it's hard to say it's written well**.
 
 # Method
 
